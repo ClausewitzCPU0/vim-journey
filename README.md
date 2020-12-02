@@ -30,8 +30,4 @@ Notes on vim mainly compiled from [ThePrimeagen](https://www.youtube.com/channel
 
 
 
-```
-If you've just been at a place in life where you've lost that passion,I hope you can find it back.Because work may never make you happy,it may never solve all your problems,but there is satisfaction in trying tu be great at something and I hope that you can kind of take that in yourself. 
-															——ThePrimeagen
-```
-
+> If you've just been at a place in life where you've lost that passion,I hope you can find it back.Because work may never make you happy,it may never solve all your problems,but there is satisfaction in trying tu be great at something and I hope that you can kind of take that in yourself.   ——ThePrimeagen
