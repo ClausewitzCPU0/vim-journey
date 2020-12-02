@@ -1,0 +1,19 @@
+{
+  "configurations": {
+    "python3": {
+      "adapter": "debugpy",
+      "configuration": {
+        "name": "pydebug: Launch",
+        "type": "python",
+        "request": "launch",
+        "cwd": "~/test",
+        "python": "/usr/bin/python3.6",
+        "stopOnEntry": true,
+        "console": "externalTerminal",
+        "debugOptions": [],
+        "program": "~/test/test.py"
+      }
+    },
+    "foo":{}
+  }
+}
