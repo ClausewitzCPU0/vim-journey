@@ -20,8 +20,6 @@ Notes on vim mainly compiled from [ThePrimeagen](https://www.youtube.com/channel
 
 
 
-
-
 ## screenshot
 
 ![example](README.assets/example.png)

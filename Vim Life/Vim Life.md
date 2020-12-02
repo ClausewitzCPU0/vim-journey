@@ -6,27 +6,21 @@ https://github.com/neoclide/coc.nvim
 
 Conquer of completion
 
-在C++补全方面更好   安装更方便，可以选择特定的补全模块：`:CocList marketplace`
+在 C++补全方面更好 安装更方便，可以选择特定的补全模块：`:CocList marketplace`
 
-![1601442118680](Vim Life.assets/1601442118680.png)
-
-
+![1601442118680](Vim_Life.assets/1601442118680.png)
 
 对不同的文件选用不同的补全插件
 
-![1601442322490](Vim Life.assets/1601442322490.png)
-
-
+![1601442322490](Vim_Life.assets/1601442322490.png)
 
 <buffer>：确保键盘映射只对当前缓冲区生效
 
-You can define mappings specific to the current buffer by using the keyword "<buffer>" in the map command. 
+You can define mappings specific to the current buffer by using the keyword "<buffer>" in the map command.
 
-![1601442345866](Vim Life.assets/1601442345866.png)
+![1601442345866](Vim_Life.assets/1601442345866.png)
 
-
-
-Vim8.2版的Vimscript编程指南
+Vim8.2 版的 Vimscript 编程指南
 
 http://vimcdoc.sourceforge.net/doc/usr_41.html
 
@@ -34,26 +28,20 @@ VimL 语言编程指北路
 
 https://github.com/lymslive/vimllearn
 
-
-
 ## Vim Life Ep 2 - Macros, Motivation for getting good!
 
 https://www.youtube.com/watch?v=Wf5cMON6vS4
 
 "I hopefully that just inspires you to do this."
 
-
-
-**注意：录制宏时，定位操作最好使用/搜索，HJKL操作如果移动到代码块之外，使用宏时会遇到意外的问题。**
-
-
+**注意：录制宏时，定位操作最好使用/搜索，HJKL 操作如果移动到代码块之外，使用宏时会遇到意外的问题。**
 
 使用宏的三步走：
 
-1. Start   q+宏名称
-2. DO IT  执行操作
-3. Stop  再次按q退出录制
-4. Play  @+宏名称 应用宏
+1. Start q+宏名称
+2. DO IT 执行操作
+3. Stop 再次按 q 退出录制
+4. Play @+宏名称 应用宏
 
 举例：要对两个代码块完成相同的操作：格式化、改函数、加参数
 
@@ -75,29 +63,29 @@ if(JSC::Options::heapSampling){
 
 ```
 
-1. 光标放在第二行，**按q进入记录模式 ，按一个键(此处为j)为这个宏命名**
+1. 光标放在第二行，**按 q 进入记录模式 ，按一个键(此处为 j)为这个宏命名**
 
-   ![1601308806428](Vim Life.assets/1601308806428.png)
+   ![1601308806428](Vim_Life.assets/1601308806428.png)
 
-2. shift v 
+2. shift v
 
 3. /endif
 
-4. =   格式化代码，并把光标放到代码块头部，这一步完成代码块格式化。
+4. = 格式化代码，并把光标放到代码块头部，这一步完成代码块格式化。
 
 5. /JSC
 
-6. dt+O 删除JSC这个单词
+6. dt+O 删除 JSC 这个单词
 
-7. heapSampling修改为logAllocations()
+7. heapSampling 修改为 logAllocations()
 
-8. recordHeapSample修改为recordHeapAllocation
+8. recordHeapSample 修改为 recordHeapAllocation
 
-9. 加一个activation参数
+9. 加一个 activation 参数
 
-10. **再次按q 退出宏**  左下角记录中的状态就没有了
+10. **再次按 q 退出宏** 左下角记录中的状态就没有了
 
-11. 光标放在第二个#ifdef处，输入**@j**，就可以对第二段代码执行宏了,修改完的代码如下：
+11. 光标放在第二个#ifdef 处，输入**@j**，就可以对第二段代码执行宏了,修改完的代码如下：
 
 ```cpp
 namespace JSC{
@@ -105,7 +93,7 @@ namespace JSC{
         if(Options::logAllocations()){
                 JSGlobalData& globalData = exec->globalData();
                 globalData.recordHeapAllocation(activation,activation->cost(globalData),"Activation");
-        }                                      
+        }
 #endif
 #ifdef HEAP_ALLOC_TRACING
         if(Options::logAllocations()){
@@ -117,17 +105,15 @@ namespace JSC{
 
 ```
 
-
-
 ### Vim Life Ep 3: Vimium : Intro to using keyboard in your browser
 
 https://www.youtube.com/watch?v=cA2aUFsSLac
 
 https://www.zhihu.com/question/23483616
 
-在Chrome中使用vim
+在 Chrome 中使用 vim
 
-将焦点聚集在第一个输入框  gi  (2gi就是第二个输入框)
+将焦点聚集在第一个输入框 gi (2gi 就是第二个输入框)
 
 p 搜索当前剪贴板内容
 
@@ -137,15 +123,13 @@ shift+h 返回
 
 f 快速定位
 
-/ 搜索也和vim一样
+/ 搜索也和 vim 一样
 
 ctrl+l 快速定位到搜索框
 
 ? 打开帮助页
 
 ctrl+w 关闭标签
-
-
 
 示例：
 
@@ -162,15 +146,11 @@ ctrl+w 关闭标签
 　　　　b：取消选中上一个字符，字符和标点算一个字符
 ```
 
-
-
 **常用的基础快捷键在这：**
 
 > **温馨提示：**
-> \1. Mac对应的⌘就是Windows中的ctrl
+> \1. Mac 对应的 ⌘ 就是 Windows 中的 ctrl
 > \2. 大小写需要区分
-
-
 
 - **操作网页**
 
@@ -233,39 +213,33 @@ B   仅从书签搜索地址，回车新标签页中打开
 T   搜索当前浏览器的所有标签
 ```
 
-
-
 自用：
 
 ```.vimrc
-# Insert your preferred key mappings here. 
+# Insert your preferred key mappings here.
 map j scrollPageDown
 map k scrollPageUp
 ```
 
-
-
 ## Vim Life Ep 4: VIM CHALLENGE: 100 vs 1 - FizzBuzz
 
- “在一些公平的考验之后，我发现那些因为代码而抓狂的人不是为了庞大的项目，而是在细小的地方就缠不休。所以我开始研究这些问题，收集这些编程人员的特点 和归结成一类问题，取名为“**FizzBuzz 问题**”。 FizzBuzz问题是一种英国学校学生经常玩的游戏。举个“FizzBuzz 问题”的例子：
+“在一些公平的考验之后，我发现那些因为代码而抓狂的人不是为了庞大的项目，而是在细小的地方就缠不休。所以我开始研究这些问题，收集这些编程人员的特点 和归结成一类问题，取名为“**FizzBuzz 问题**”。 FizzBuzz 问题是一种英国学校学生经常玩的游戏。举个“FizzBuzz 问题”的例子：
 
-写一个程序打印1到100这些数字。但是遇到数字为3的倍数的时候，打印“Fizz”替代数字，5的倍数用“Buzz”代替，既是3的倍数又是5的倍数打印“FizzBuzz”。
+写一个程序打印 1 到 100 这些数字。但是遇到数字为 3 的倍数的时候，打印“Fizz”替代数字，5 的倍数用“Buzz”代替，既是 3 的倍数又是 5 的倍数打印“FizzBuzz”。
 
 https://www.cnblogs.com/webary/p/6507413.html
-
-
 
 ## Vim Life Ep 5: HOW TO Get Fast at Vim
 
 https://www.youtube.com/watch?v=mMCvKZaWUi8
 
-提升vim熟练度的游戏：（**仅用于Neovim**）
+提升 vim 熟练度的游戏：（**仅用于 Neovim**）
 
 https://github.com/ThePrimeagen/vim-be-good
 
-vimrc中增加配置后，`:VimBeGood` 命令进入游戏
+vimrc 中增加配置后，`:VimBeGood` 命令进入游戏
 
-也可以用docker：
+也可以用 docker：
 
 ```shell
 docker run -it --rm brandoncc/vim-be-good:stable
@@ -273,41 +247,37 @@ docker run -it --rm brandoncc/vim-be-good:stable
 
 删除对应行来启动有游戏：
 
-![1604649958341](Vim Life.assets/1604649958341.png)
+![1604649958341](Vim_Life.assets/1604649958341.png)
 
 - 行号+j 向下跳转 行号+k （跳转相对行号 练习跳转删除）
-- hjkl删除
-- ci+括号  （删除括号中内容并插入）
+- hjkl 删除
+- ci+括号 （删除括号中内容并插入）
 - ~（翻转大小写）
 - 随机模式（上面几种模式随机出现）
 
 ```.vimrc
-" 设置行号和相对行号                                                            
-" 进入编辑模式时使用绝对行号，退出编辑模式进入normal模式时使用相对行号          
-set nu           
+" 设置行号和相对行号
+" 进入编辑模式时使用绝对行号，退出编辑模式进入normal模式时使用相对行号
+set nu
 set rnu
-augroup relative_numbser                                                        
- autocmd!                                                                       
- autocmd InsertEnter * :set norelativenumber                                    
- autocmd InsertLeave * :set relativenumber                                      
-augroup END 
+augroup relative_numbser
+ autocmd!
+ autocmd InsertEnter * :set norelativenumber
+ autocmd InsertLeave * :set relativenumber
+augroup END
 ```
-
-
 
 ## Vim Life Ep 6: VIM + Deno Setup and My First Thoughts
 
 https://www.youtube.com/watch?v=9ka05U4ycnE
 
-本节是为了js/ts开发调整环境
+本节是为了 js/ts 开发调整环境
 
-gruvbox调整为community版本
+gruvbox 调整为 community 版本
 
-补全使用coc
+补全使用 coc
 
 Deno: https://www.cnblogs.com/champyin/p/13126351.html
-
-
 
 ## Vim Life Ep 7: Coolest Vim Command
 
@@ -321,9 +291,7 @@ https://www.youtube.com/watch?v=E7NBhSsZouc
 
 `=i)` 调整()中内容缩进
 
-一般流程：跳转对应行（数字+j/k）+**<不用跳转到引号中！>**+删除内容（ci+'或"）并插入 
-
-
+一般流程：跳转对应行（数字+j/k）+**<不用跳转到引号中！>**+删除内容（ci+'或"）并插入
 
 ## Vim Life Ep 8: Two Simple Steps to go from IDE to Vim
 
@@ -332,22 +300,16 @@ https://www.youtube.com/watch?v=E7NBhSsZouc
 - hjkl
 - w b e(单词尾) E(行尾字符)
 - f F 正向 反向查找
-- **gi 进入到上一次插入模式的位置  gv 重新选择上一次选中的文字** 
-- da   ca
-- **C-w + C-v 垂直分割   C-w + C-s 水平分割  C-w +hjkl  跳转到某一方向的窗口  C-w + o 关闭其他窗口**
+- **gi 进入到上一次插入模式的位置 gv 重新选择上一次选中的文字**
+- da ca
+- **C-w + C-v 垂直分割 C-w + C-s 水平分割 C-w +hjkl 跳转到某一方向的窗口 C-w + o 关闭其他窗口**
 - **:Ex 打开文件窗口**
 
-
-
-vim命令中文速查表：
+vim 命令中文速查表：
 
 https://github.com/skywind3000/awesome-cheatsheets/blob/master/editors/vim.txt
 
-
-
-![img](Vim Life.assets/175824-20161123224659425-328736487.png)
-
-
+![img](Vim_Life.assets/175824-20161123224659425-328736487.png)
 
 ## Vim "g" Command: The Good Spot!!!
 
@@ -355,45 +317,43 @@ https://www.youtube.com/watch?v=CN8p9iL7PPI
 
 1. g ctrl-g 显示文件统计
 
-   ![1604997420762](Vim Life.assets/1604997420762.png)
+   ![1604997420762](Vim_Life.assets/1604997420762.png)
 
-2. ga 显示光标处字符的ASCII码
+2. ga 显示光标处字符的 ASCII 码
 
-   g8 显示光标下字符的 utf-8 编码字节序  （十六进制ascii码）
+   g8 显示光标下字符的 utf-8 编码字节序 （十六进制 ascii 码）
 
 3. g& 重复上次操作[1:30]
 
    （查找替换快捷键是什么？）
 
-4. J 链接多行为一行   gJ 链接时保持空格数量
+4. J 链接多行为一行 gJ 链接时保持空格数量
 
-5. U 转为大写  gU+motion 比如gU vi) 将括号内全部转为大写 u转为小写
+5. U 转为大写 gU+motion 比如 gU vi) 将括号内全部转为大写 u 转为小写
 
-6. gd 跳转到局部定义（光标下的单词的定义） gD  跳转到全局定义（光标下的单词的定义）
+6. gd 跳转到局部定义（光标下的单词的定义） gD 跳转到全局定义（光标下的单词的定义）
 
-7. gf  打开名称为光标下文件名的文件
+7. gf 打开名称为光标下文件名的文件
 
-8. 选中一行 gq  自动换行
+8. 选中一行 gq 自动换行
 
-9. number + g_  向下跳转n行至行尾
+9. number + g\_ 向下跳转 n 行至行尾
 
 10. :set wrap（不常用）
 
 11. gv 返回之前高亮处
 
-12. 条件替换：选中一段文字，按: 
+12. 条件替换：选中一段文字，按:
 
-    **:s/p1/p2/g          将当前行中全替换p1为p2**
-    **:%s/p1/p2/g         将当前文件中全替换p1为p2**
-    **:%s/p1/p2/gc        将当前文件中全替换p1为p2，并且每处询问你是否替换**
+    **:s/p1/p2/g 将当前行中全替换 p1 为 p2**
+    **:%s/p1/p2/g 将当前文件中全替换 p1 为 p2**
+    **:%s/p1/p2/gc 将当前文件中全替换 p1 为 p2，并且每处询问你是否替换**
 
-    :'<,'>s/.\*exe.\*//  删除含有exe单词的行，
+    :'<,'>s/.\*exe.\*// 删除含有 exe 单词的行，
 
     **:'<,'>g/exe/d 也是删除，并且会删除行**
 
-    **:'<,'>g/execute/norm! diw 删除含exe行的每行第一个单词（或者是空格）**
-
-
+    **:'<,'>g/execute/norm! diw 删除含 exe 行的每行第一个单词（或者是空格）**
 
 ## Vim Life: VimRC update plugins and Autocmds
 
@@ -403,30 +363,30 @@ https://www.youtube.com/watch?v=-X6rEdZolTA
 
 `set relativenumber`
 
-#### coc代替ycm：（只有nvim版本）
+#### coc 代替 ycm：（只有 nvim 版本）
 
 ```
 Plug 'neoclide/coc.nvim',{'branch':'release'}
 ```
 
-#### fzf代替ctrlp：（fzf在大项目中更快 已增加）
+#### fzf 代替 ctrlp：（fzf 在大项目中更快 已增加）
 
 ```
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'    
+Plug 'junegunn/fzf.vim'
 
 ===============================================================
 
-" fzf set 设置窗口大小和反向排列                                                
-let g:fzf_layout = {'window':{'width':0.8,'height':0.8}} 
-let $FZF_DEFAULT_OPTS='--reverse'                        
+" fzf set 设置窗口大小和反向排列
+let g:fzf_layout = {'window':{'width':0.8,'height':0.8}}
+let $FZF_DEFAULT_OPTS='--reverse'
 ```
 
-问题：如何做到Rg命令的预览窗口？
+问题：如何做到 Rg 命令的预览窗口？
 
- <leader>pw
+<leader>pw
 
-![1605087885916](Vim Life.assets/1605087885916.png)
+![1605087885916](Vim_Life.assets/1605087885916.png)
 
 #### vim-dispatch：异步执行后台任务
 
@@ -438,9 +398,9 @@ Plug 'tpope/vim-dispatch'
 
 `:Dispatch g++ Main.cpp -o test`
 
-在错误窗口中选择错误信息，ctrl+w F  调出错误产生文件   ctrl+w H 改为竖排
+在错误窗口中选择错误信息，ctrl+w F 调出错误产生文件 ctrl+w H 改为竖排
 
-#### vim练习：
+#### vim 练习：
 
 https://github.com/ThePrimeagen/vim-apm
 
@@ -451,18 +411,16 @@ https://github.com/ThePrimeagen/vim-be-good
 <leader>ghw 查看当前函数帮助文档
 
 ```
-" 快速查看帮助文档                                     
+" 快速查看帮助文档
 nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
 ```
 
 <leader>pw 查看当前函数在哪些文件中用到
 
 ```
-" 快速查找                                             
+" 快速查找
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
 ```
-
-
 
 #### 复制：
 
@@ -473,21 +431,17 @@ augroup highlight_yank
 augroup END
 ```
 
-
-
 其他快捷键：
 
 https://github.com/awesome-streamers/awesome-streamerrc/blob/master/ThePrimeagen/init.vim
 
+### 安装 neovim（ubuntu）：
 
-
-### 安装neovim（ubuntu）：
-
-##### （Initial仓库中的操作更具体）
+##### （Initial 仓库中的操作更具体）
 
 https://github.com/neovim/neovim/wiki/Building-Neovim
 
-1. Clone源码
+1. Clone 源码
 
    ```shell
    git clone git@github.com:neovim/neovim.git
@@ -516,7 +470,7 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
 5. 首先需要为 Neovim 提供 Python3 支持`（:echo has("python3")）`：
 
    ```
-   pip3 install pynvim --upgrade 
+   pip3 install pynvim --upgrade
    ```
 
 6. 在~目录下创建.config/nvim
@@ -538,35 +492,35 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
    ```
 
-9. 安装fzf，否则vim中的插件不生效
+9. 安装 fzf，否则 vim 中的插件不生效
 
    ```shell
    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
    ~/.fzf/install
    ```
 
-10. 安装ripgrep（Rg命令）
+10. 安装 ripgrep（Rg 命令）
 
     ```
     curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
     sudo dpkg -i ripgrep_11.0.2_amd64.deb
     ```
 
-11. 进入neovim 执行`:PlugInstall`
+11. 进入 neovim 执行`:PlugInstall`
 
-12. 设置coc.nvim  :
+12. 设置 coc.nvim :
 
-    先安装依赖项nodejs（这一步不行的话要手动安装）
+    先安装依赖项 nodejs（这一步不行的话要手动安装）
 
     ```
     sudo curl -sL install-node.now.sh/lts | bash
     ```
 
-    ### **手动安装nodejs：**
+    ### **手动安装 nodejs：**
 
-    方法1（推荐）： install Node.js via binary archive on Linux
+    方法 1（推荐）： install Node.js via binary archive on Linux
 
-    **注意路径中改为对应的nodejs版本！**
+    **注意路径中改为对应的 nodejs 版本！**
 
     1. Unzip the binary archive to any directory you wanna install Node, I use `/usr/local/lib/nodejs`
 
@@ -579,7 +533,7 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
     1. Set the environment variable `~/.profile`, add below to the end
 
     ```shell
-    # Nodejs 
+    # Nodejs
     # 这一步如果用的zsh，要加入到~/.zshrc中 否则每次登陆都要source ~/.profile
     export PATH=/usr/local/lib/nodejs/node-v14.15.0-linux-x64/bin:$PATH
     ```
@@ -622,11 +576,9 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
      zlib: '1.2.11' }
     ```
 
-    
+    方法 2：（从源码编译 **很慢**）
 
-    方法2：（从源码编译 **很慢**）
-
-    从[nodejs](http://nodejs.org/download/)下载`tar.gz`后缀的NodeJS最新版源代码包并解压到某个位置。
+    从[nodejs](http://nodejs.org/download/)下载`tar.gz`后缀的 NodeJS 最新版源代码包并解压到某个位置。
 
     ```
     tar -zxvf node-v14.15.0.tar.gz
@@ -641,8 +593,6 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
 
     完成后运行`:CocConfig`，能打开配置文件就说明安装成功了
 
-    
-
     ### 安装扩展：(举例)
 
     补全语言支持列表：https://github.com/neoclide/coc.nvim/wiki/Language-servers
@@ -652,7 +602,7 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
     :CocInstall coc-marketplace coc-python
     ```
 
-13. 补全C系语言的配置
+13. 补全 C 系语言的配置
 
     ```shell
     # 先安装clangd：（需要ubuntu18.04以上）
@@ -663,7 +613,7 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
     clangd-9 --version
     ```
 
-14. 补全vim脚本配置
+14. 补全 vim 脚本配置
 
     ```shell
     # 安装go
@@ -673,7 +623,7 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
     # 这一步如果用的zsh，要加入到~/.zshrc中 否则每次登陆都要source ~/.profile
     export PATH=$PATH:/usr/local/go/bin
     go version # 检查版本
-    
+
     # https://github.com/mattn/efm-langserver
     go get github.com/mattn/efm-langserver
     # $HOME/.config/efm-langserver/config.yaml 修改配置（没有就新建）
@@ -683,17 +633,17 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
         lint-stdin: true
         lint-offset: 1
         format-command: 'htmlbeautifier'
-    
+
       vim:
         lint-command: 'vint -'
         lint-stdin: true
-    
+
       markdown:
         lint-command: 'markdownlint -s'
         lint-stdin: true
         lint-formats:
           - '%f: %l: %m'
-    
+
     # coc-settings.json
       // languageserver
       "languageserver": {
@@ -707,7 +657,7 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
       },
     ```
 
-15. lua补全
+15. lua 补全
 
     ```shell
     # lua补全
@@ -720,7 +670,7 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
     sudo make install
     # 运行 lua 测试
     lua
-    
+
     wget https://luarocks.org/releases/luarocks-3.3.1.tar.gz
     tar zxpf luarocks-3.3.1.tar.gz
     cd luarocks-3.3.1
@@ -735,19 +685,19 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
     }
     ```
 
-16. JS/TS补全
+16. JS/TS 补全
 
     ```
     :CocInstall coc-tsserver
     ```
 
-17. bash补全
+17. bash 补全
 
     ```
     :CocInstall coc-sh
     ```
 
-18. SQL补全
+18. SQL 补全
 
     ```shell
     npm i -g sql-language-server
@@ -761,7 +711,7 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
     }
     ```
 
-19.  Dockerfile补全
+19. Dockerfile 补全
 
     ```shell
     # Dockerfile
@@ -787,15 +737,11 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
     docker-langserver --socket=<port>
     ```
 
-20. 
-
-    
-
-
+20.
 
 删除：
 
-To *uninstall* after `make install`, just delete the `CMAKE_INSTALL_PREFIX` artifacts:
+To _uninstall_ after `make install`, just delete the `CMAKE_INSTALL_PREFIX` artifacts:
 
 ```
 sudo rm /usr/local/bin/nvim
@@ -804,23 +750,19 @@ sudo rm -r /usr/local/share/nvim/
 
 然后删除 `~/.config/nvim` 配置文件夹
 
-
-
 ## Getting started with Nvim + LSP (Quick Start)
 
 https://www.youtube.com/watch?v=tOjVHXaUrzo&t=117s
 
 %可以直接新建文件
 
-
-
-**另附：什么是LSP？**
+**另附：什么是 LSP？**
 
 Language Server Protocol (LSP)：
 
 LSP 和 DAP 都是微软推出的目的为解决 IDE 语言服务和调试适配器 M x N 问题, 传统的每个 IDE 都要自行开发一套某个语言的语言服务程序和调试适配器, 而这些语言服务程序都使用不同的接口, 完全无法复用, 造成各大 IDE 开发成本过高的问题.
 
-neovim LSP文档：
+neovim LSP 文档：
 
 https://neovim.io/doc/user/lsp.html
 
@@ -833,13 +775,11 @@ LSP facilitates features like go-to-definition, find-references, hover,
 completion, rename, format, refactor, etc., using semantic whole-project
 analysis (unlike |ctags|).
 
-
-
-LSP在coc.nvim中的使用：
+LSP 在 coc.nvim 中的使用：
 
 https://zhuanlan.zhihu.com/p/39302327
 
-LSP-language-server-protocol规范：
+LSP-language-server-protocol 规范：
 
 https://zhuanlan.zhihu.com/p/139382598
 
@@ -854,20 +794,3 @@ https://github.com/Ricbet/blog/blob/master/src/article/15.WebIDE%E6%8A%80%E6%9C%
 Vimconf.live: Neovim Builtin LSP：
 
 https://www.youtube.com/watch?v=C9X5VF9ASac
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
